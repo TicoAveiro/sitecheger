@@ -13,7 +13,7 @@
     <div class="cabecalho">
 
         <div class="logo">
-            <h3>Universe Hunter</h3>
+            <h3>You Are SAFE</h3>
         </div>
         <div class="btn-bar-menu">
             <img src="_image/icon-bars.png" alt="">
@@ -30,14 +30,52 @@
                 <li><a href="#">Contato</a></li>
             </ul>
         </div>
-
     </div>
+
+    <!-- START BANNER -->
+    <div class="banner">
+        <div class="texto">
+            <h1>Aventura</h1>
+        </div>
+
+        <div class="icons-banner">
+
+            <div class="icon">
+                <a href="#"><img src="_image/icon-fogueira.png" alt=""></br>Abrigos</a>
+            </div>
+
+            <div class="icon">
+                <a href="#"><img src="_image/icon-comida.png" alt=""></br>Alimentação</a>
+                </div>
+            
+            <div class="icon">
+                <a href="#"><img src="_image/icon-mapa.png" alt=""></br>safe rotas</a>
+            </div>
+                
+        </div>
+    </div>
+    <!-- START ARTIGO -->
+    <div class="atigo-01">
+        <h1>Aveture-se</h1>
+        <h6>Primeiro Lugar no Mundo Em Proporcionar Aventuras Pra Você!</h6>
+    </div>
+
+
+
+    
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script>
         // CLOSE MENU
-        $(".btn-close").click(function(){$(".menu").hide();})
+        $(".btn-close").click(function(){
+            $(".menu").hide();
+            $(".banner").show();
+
+        })
         // OPEN MENU
-        $(".btn-bar-menu").click(function(){$(".menu").show();})
+        $(".btn-bar-menu").click(function(){
+            $(".menu").show();
+            $(".banner").hide();
+        })
     </script>
 </body>
 </html>
