@@ -9,6 +9,35 @@
     <title>Game changer</title>
 </head>
 <body>
-    <h1>Teste de envio!</h1>
+    <!-- START CABECALHO -->
+    <div class="cabecalho">
+
+        <div class="logo">
+            <h3>Universe Hunter</h3>
+        </div>
+        <div class="btn-bar-menu">
+            <img src="_image/icon-bars.png" alt="">
+        </div>
+
+        <div class="menu">
+            <div class="btn-close">
+                <img src="_image/btn-close.png" alt="">
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Locais</a></li>
+                <li><a href="#">Acessórios</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script>
+        // CLOSE MENU
+        $(".btn-close").click(function(){$(".menu").hide();})
+        // OPEN MENU
+        $(".btn-bar-menu").click(function(){$(".menu").show();})
+    </script>
 </body>
 </html>
