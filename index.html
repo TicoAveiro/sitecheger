@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="_javascript/vue.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="_css/estilo.css">
     <title>You Are SAFE</title>
 </head>
 <body>
-    <!-- START CABECALHO -->
+    <!-- START CABECALHO -------------------------------------------------------------->
     <div class="cabecalho">
 
         <div class="logo">
             <h3>You Are SAFE</h3>
         </div>
-        <div class="btn-bar-menu">
+        <!-- AQUI TEM CODIGO Vue.js -->
+        <div class="btn-bar-menu" v-on:click="abreMenu">
             <img src="_image/icon-bars.png" alt="">
         </div>
 
-        <div class="menu">
-            <div class="btn-close">
+        <!-- AQUI TEM CODIGO Vue.js -->
+        <div class="menu" v-show="menu_controle">
+            <div class="btn-close" v-on:click="abreMenu">
                 <img src="_image/btn-close.png" alt="">
             </div>
+
             <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Locais</a></li>
@@ -32,7 +36,7 @@
         </div>
     </div>
 
-    <!-- START BANNER -->
+    <!-- START BANNER -------------------------------------------------------------->
     <div class="banner">
         <div class="texto">
             <h1>Aventura</h1>
@@ -54,13 +58,13 @@
                 
         </div>
     </div>
-    <!-- START ARTIGO -->
+    <!-- START ARTIGO -------------------------------------------------------------->
     <div class="atigo-01">
         <h1>Aveture-se</h1>
         <h6>Primeiro Lugar no Mundo Em Proporcionar Aventuras Pra Você!</h6>
     </div>
 
-    <!-- START SECTION 4 OFERTAS-->
+    <!-- START SECTION 4 OFERTAS-------------------------------------------------------------->
     <div class="titulo-ofertas">
             <h4 >Nossas Ofertas para hoje!</h4>
     </div>
@@ -94,7 +98,7 @@
 
     </div>
 
-    <!-- CHAMADA PARA ACÃO. -->
+    <!-- CHAMADA PARA ACÃO. -------------------------------------------------------------->
     <div class="chamada-para-acao">
         <h2>Adiquira o Seu Agora Mesmo!</h2>
 
@@ -103,16 +107,16 @@
         </div>
     </div>
 
-    <!-- ARTIGO 01 -->
+    <!-- ARTIGO 01 -------------------------------------------------------------->
     <div class="artigo-02">
         <h1>Junte-se a nós!</h1>
         <h6>simplesmente texto fictício da indústria tipográfica e de impressão.
             O Lorem Ipsum tem sido o texto fictício</h6>
     </div>
 
-    <!-- START FOOTER -->
+    <!-- START FOOTER -------------------------------------------------------------->
     <div class="footer">
-        <h3>Vreha Conhecer</h3>
+        <h3>Venha Conhecer</h3>
         <div class="menu-footer">
             <ul>
                 <li><a href="#">Tudo Sobre Nós</a></li>
@@ -123,7 +127,7 @@
         </div>
 
         <div class="mapa">
-                
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15670.787447364317!2d-37.05076685202942!3d-10.91062691159766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab365af9b5987%3A0xddb454571387b2a3!2sCa%C3%A7a+e+Pesca!5e0!3m2!1spt-BR!2sbr!4v1564149032743!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
 
         <div class="icon-sociais">
@@ -137,18 +141,25 @@
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    
     <script>
-        // CLOSE MENU
-        $(".btn-close").click(function(){
-            $(".menu").hide();
-            $(".banner").show();
 
-        })
-        // OPEN MENU
-        $(".btn-bar-menu").click(function(){
-            $(".menu").show();
-            $(".banner").hide();
+        let root = new Vue({
+            el: ".cabecalho",
+            data:{
+                menu_controle: false,
+                
+
+            },
+
+            methods:{
+
+                //Usado para abrir e fechar o menu na Versão para dispositiveis moveis.
+                abreMenu:function()
+                {
+                    this.menu_controle = !this.menu_controle
+                }
+            }
         })
     </script>
 </body>
