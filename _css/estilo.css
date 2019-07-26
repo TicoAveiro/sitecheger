@@ -33,16 +33,31 @@ h1, h2, h3{ margin: 0; padding: 0;}
 
 /* ARTIGO 01 */
 .atigo-01{padding:4% 2%; float: left; width: 100%; color:#1C1C1C; background: rgba(84, 255, 158, 0.247); text-shadow: 1px 1px 4px white;}
+.atigo-01 h1{text-shadow: 1px 1px 2px black;}
 
 /* OFERTAS */
 .titulo-ofertas{width:100%; text-align:center; padding: 10% 4%; float: left;}
-.titulo-ofertas h4{border-bottom: 1px solid #32CD32; padding: 3%;}
+.titulo-ofertas h4{text-shadow: 1px 1px 3px grey; border-bottom: 1px solid #32CD32; padding: 3%;}
 
 .ofertas{width:100%; padding: 5% 7%; float: left; text-align: center;}
 .ofertas h4{border-bottom: 1px solid gray; margin-bottom: 8%;}
-.ofertas .oferta{width: 100%; padding: 3% 5%; text-align: center; box-shadow: 0 0 10px black; margin-bottom: 7%;}
+.ofertas  h4, p{text-shadow: 1px 1px 1px grey;}
+.ofertas .oferta{width: 100%; padding: 3% 5%; text-align: center; box-shadow: 0 0 5px black; margin-bottom: 7%;}
 
 /* CHAMADA PARA AÇÃO */
 .chamada-para-acao{text-align: center; width: 100%; float: left; background: rgba(84, 255, 158, 0.247); padding: 4%}
 .chamada-para-acao .btn-acao{width: 100%; float: left; padding: 5%;}
 .chamada-para-acao button{width:100%; padding: 15px; background: #008B00; color:white; border-radius: 8px; font-weight: 600; font-size: 1.5em;}
+
+/* ARTIGO 02 */
+.artigo-02{width: 100%; float:right; text-align: right; padding: 10% 2%;}
+.artigo-02 h1{text-shadow: 1px 1px 2px black;}
+
+/* FOOTER */
+.footer ul{float: left; width: 100%; list-style: none; text-align: center}
+.footer{float: left; width: 100%; padding: 5% 2%; background:#6C7B8B; color:white; text-align: center;}
+.footer .menu-footer{float: left; width:100%;}
+.footer .menu-footer li{padding: 5%}
+.footer .mapa{float: left; width:100%; border: 1px solid;}
+.footer .icon-sociais{text-align: center; width:100%; float: left;}
+.icon-sociais ul li{display: inline-block; margin-top: 8%; padding: 3%;}
