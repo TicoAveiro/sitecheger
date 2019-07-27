@@ -39,7 +39,7 @@ h1, h2, h3{ margin: 0; padding: 0;}
 .titulo-ofertas{width:100%; text-align:center; padding: 10% 4%; float: left;}
 .titulo-ofertas h4{text-shadow: 1px 1px 3px grey; border-bottom: 1px solid #32CD32; padding: 3%; font-size: 2em;}
 
-.ofertas{width:100%; padding: 5% 7%; float: left; text-align: center;}
+.ofertas{width:100%; padding: 5% 10%; float: left; text-align: center;}
 .ofertas h4{border-bottom: 1px solid gray; margin-bottom: 8%;}
 .ofertas  h4, p{text-shadow: 1px 1px 1px grey;}
 .ofertas .oferta{width: 100%; padding: 3% 5%; text-align: center; box-shadow: 0 0 5px black; margin-bottom: 7%;}
@@ -71,10 +71,16 @@ h1, h2, h3{ margin: 0; padding: 0;}
 
 
 /* START BREAK POINT */
+@media (min-width:610px){
+    .ofertas .oferta{width: 46%; float: left; margin-right: 4%}
+    .ofertas .segunda{float: right; margin-right: 0;}
+    .ofertas .quarta{float: right; margin-right: 0;}
+}
+
 @media (min-width:768px){
     /* CABECALHO */
     .cabecalho .btn-bar-menu{display: none;}
-    .menu {background: rgb(32, 31, 31); width:50%; float: right;display: block !important;  position: static; text-align: right;}
+    .menu {background: rgb(32, 31, 31); width:50%; float: right; display: block !important;  position: static; text-align: right;}
     .menu ul{width: 100%; }
     .menu li{display: inline-block; font-size: 1.0em; padding: 5% 4%; }
     .menu .btn-close{display: none;}
@@ -85,15 +91,6 @@ h1, h2, h3{ margin: 0; padding: 0;}
     .icons-banner .icon img{width: 30%;}
     .icons-banner .icon a:hover{color: white;}
     .icons-banner .icon a{text-decoration: none;}
-
-    /* OFERTAS */
-    
-    .ofertas .oferta{width: 46%; float: left; margin-right: 4%}
-    .ofertas .segunda{float: right; margin-right: 0;}
-    .ofertas .quarta{float: right; margin-right: 0;}
-
-    
-    
        
 }
 
